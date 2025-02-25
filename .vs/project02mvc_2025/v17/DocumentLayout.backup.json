@@ -1,0 +1,95 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\aloksirmvc2025\\project02mvc_2025\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD36DA08-95AB-434A-9F5B-1981F37C7701}|project02mvc\\project02mvc.csproj|F:\\aloksirmvc2025\\project02mvc_2025\\project02mvc\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD36DA08-95AB-434A-9F5B-1981F37C7701}|project02mvc\\project02mvc.csproj|solutionrelative:project02mvc\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD36DA08-95AB-434A-9F5B-1981F37C7701}|project02mvc\\project02mvc.csproj|F:\\aloksirmvc2025\\project02mvc_2025\\project02mvc\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CD36DA08-95AB-434A-9F5B-1981F37C7701}|project02mvc\\project02mvc.csproj|solutionrelative:project02mvc\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD36DA08-95AB-434A-9F5B-1981F37C7701}|project02mvc\\project02mvc.csproj|f:\\aloksirmvc2025\\project02mvc_2025\\project02mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD36DA08-95AB-434A-9F5B-1981F37C7701}|project02mvc\\project02mvc.csproj|solutionrelative:project02mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD36DA08-95AB-434A-9F5B-1981F37C7701}|project02mvc\\project02mvc.csproj|F:\\aloksirmvc2025\\project02mvc_2025\\project02mvc\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD36DA08-95AB-434A-9F5B-1981F37C7701}|project02mvc\\project02mvc.csproj|solutionrelative:project02mvc\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "F:\\aloksirmvc2025\\project02mvc_2025\\project02mvc\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "project02mvc\\Controllers\\EmployeeController.cs",
+              "ToolTip": "F:\\aloksirmvc2025\\project02mvc_2025\\project02mvc\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "project02mvc\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAYwF4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T11:56:14.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "F:\\aloksirmvc2025\\project02mvc_2025\\project02mvc\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "project02mvc\\Controllers\\HomeController.cs",
+              "ToolTip": "F:\\aloksirmvc2025\\project02mvc_2025\\project02mvc\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "project02mvc\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T12:45:15.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "F:\\aloksirmvc2025\\project02mvc_2025\\project02mvc\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "project02mvc\\App_Start\\RouteConfig.cs",
+              "ToolTip": "F:\\aloksirmvc2025\\project02mvc_2025\\project02mvc\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "project02mvc\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T12:11:38.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\aloksirmvc2025\\project02mvc_2025\\project02mvc\\Views\\Employee\\Index.cshtml",
+              "RelativeDocumentMoniker": "project02mvc\\Views\\Employee\\Index.cshtml",
+              "ToolTip": "F:\\aloksirmvc2025\\project02mvc_2025\\project02mvc\\Views\\Employee\\Index.cshtml",
+              "RelativeToolTip": "project02mvc\\Views\\Employee\\Index.cshtml",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAAANUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T11:59:32.29Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

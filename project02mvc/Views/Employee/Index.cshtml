@@ -1,0 +1,235 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>form validation</h2>
+<table class="tab-content">
+    <tr>
+        <td class=" text-primary">Name:</td>
+        <td><input type="text" id="txtname" /></td>
+    </tr>
+    <tr>
+        <td class=" text-primary">City:</td>
+        <td><input type="text" id="txtcity" /></td>
+    </tr>
+    <tr>
+        <td class=" text-primary">Mobile:</td>
+        <td><input type="text" id="txtmobile" /></td>
+    </tr>
+    <tr>
+        <td class=" text-primary">Age:</td>
+        <td><input class="border-danger" type="text" id="txtage" /></td>
+    </tr>
+    <tr>
+        <td class=" text-primary">Email:</td>
+        <td><input type="text" id="txtemail" /></td>
+    </tr>
+
+    <tr class="">
+
+        <td><input class="btn btn-primary mt-3" type="button" id="btninsert" value="Submit" onclick="Validation()" /></td>
+    </tr>
+
+</table>
+<table id="tbl" border="5" style="background-color:lightslategray;color:wheat;width:850px" >
+    <tr style="background-color:maroon;height:35px; " >
+        <th>EmpId</th><th>EmpName</th><th>EmpCity</th><th>EmpMobile</th><th>EmpAge</th><th>EmpEmail</th><th></th><th></th>
+    </tr>
+</table>
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<script type="text/javascript">
+    var IDDD = 0;
+    /*pageload */
+    $(document).ready(function () {
+        ShowData();
+
+    });
+
+    /* validation*/
+    function Validation() {
+        var check=""
+      check = Checkname();
+     check +=  Checkcity();
+        check += CheckMobile();
+        check += Checkemail();
+        check += Checkage();
+        if (check == "") {
+            SaveData();
+        } else {
+            alert(check);
+}
+
+    }
+
+    function Checkname() {
+        var Alph = /^[a-zA-Z]*$/
+        if ($("#txtname").val() == "") {
+            return 'please entner your name!\n';
+
+        } else if (Alph.test($("#txtname").val())) {
+            return "";
+        } else {
+            return 'Name should be only alphabets !\n';
+        }
+    }
+    function Checkcity() {
+        var char = /^[a-zA-Z]*$/
+        if ($("#txtcity").val() == "") {
+            return'please entner your city!\n';
+        } else if (char.test($("#txtcity").val())) {
+            return  "";
+
+        }else {
+            return 'City  should be only alphabets !';
+        }
+        }
+
+    function CheckMobile() {
+        var numb = /^[0-9]+$/
+        if ($("#txtmobile").val() == "") {
+            return 'please entner your Mobile!\n';
+        } else if (numb.test($("#txtmobile").val())) {
+            return "";
+        } else {
+            return 'Please only enter numeric characters \n!';
+        }
+    }
+    function Checkemail() {
+
+     
+        if ($("#txtemail").val() == "") {
+            return 'please entner your emile!\n';
+        } else {
+            return "";
+        } 
+    }
+    function Checkage() {
+
+       
+
+        if ($("#txtage").val() == "") {
+            return'please entner your age!\n';
+        } else{
+
+            return "";
+        } 
+
+    }
+
+
+
+   
+
+    /* showdata*/
+    function ShowData() {
+        $.ajax({
+            url: 'Employee/Employeeget',
+            type: 'post',
+            data: {},
+            success: function (data) {
+                data = JSON.parse(data);
+                $("#tbl").find("tr:gt(0)").remove();
+
+                for (var i = 0; i < data.length; i++) {
+                    $("#tbl").append('<tr><td>' + data[i].empId + '</td> <td>' + data[i].E_Name + '</td> <td>' + data[i].E_City + ' </td> <td>' + data[i].E_Mobile + '</td> <td>' + data[i].age + '</td> <td>' + data[i].E_mail + '</td> <td><input style="color:red" type="button" id="btnelete" value="Delete" onclick="DeleteData(' + data[i].empId + ')" /><td>  <td><input style="color:red" type="button" id="btnEdit" value="Edit" onclick="EditData(' + data[i].empId +')" /><td></tr>')
+                }
+            },
+            error: function () {
+                alert('data not found !')
+            }
+        });
+
+    }
+    /*DataEdit */
+
+    function EditData(empid) {
+        $.ajax({
+            url: 'Employee/EmployeeEdit',
+            type: 'post',
+            data: { F: empid },
+            success: function (data) {
+                data = JSON.parse(data)
+                $("#txtname").val(data[0].E_Name);
+                $("#txtcity").val(data[0].E_City);
+                $("#txtmobile").val(data[0].E_Mobile);
+                $("#txtemail").val(data[0].E_mail);
+                $("#txtage").val(data[0].age);
+                $("#btninsert").val("Update");
+                IDDD = empid;
+            },
+            error: function () {
+                alert('data has been  not  Edited successfully !');
+            }
+        })
+
+    }
+
+    /*Clear data */
+
+    function Clear() {
+        $("#txtname").val("");
+        $("#txtcity").val("");
+        $("#txtmobile").val("");
+        $("#txtemail").val("");
+        $("#txtage").val("");
+        $("#btninsert").val("Submit");
+        IDDD = 0;
+
+    }
+    /* Deletedata */
+    function DeleteData(empid) {
+        $.ajax({
+            url: 'Employee/EmployeeDelete',
+            type: 'post',
+            data: { F:empid},
+            success: function () {
+                alert('data has been Deleted  successfully !');
+                ShowData();
+            },
+            error: function () {
+                alert('data has been  not  Deleted successfully !');
+            }
+        })
+
+    }
+
+
+   /* savedata*/
+
+    function SaveData() {
+        if ($("#btninsert").val() == "Submit") {
+            $.ajax({
+                url: 'Employee/EmployeeInsert',
+                type: 'post',
+                data: { A: $("#txtname").val(), B: $("#txtcity").val(), C: $("#txtmobile").val(), D: $("#txtemail").val(), E: $("#txtage").val() },
+                success: function () {
+                    alert('data has been save !')
+                    ShowData();
+                    Clear();
+                },
+                error: function () {
+                    alert('data has been not  save !')
+                }
+            })
+        }
+       
+        else  if ($("#btninsert").val() == "Update") {   
+                $.ajax({
+                    url: 'Employee/EmployeeUpdate',
+                    type: 'post',
+                    data: { A: $("#txtname").val(), B: $("#txtcity").val(), C: $("#txtmobile").val(), D: $("#txtemail").val(), E: $("#txtage").val(),F:IDDD },
+                    success: function () {
+                        alert('data has been update Success !');
+                        ShowData();
+                        Clear();
+                    },
+                    error: function () {
+                        alert('data has been not  update  !');
+                    }
+                })
+        }
+
+    }
+
+</script>

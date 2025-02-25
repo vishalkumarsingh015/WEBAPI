@@ -1,0 +1,60 @@
+use jquery01
+
+Create table tblEmployee(
+empId int  primary key identity,
+E_Name varchar(50),
+E_City varchar(50),
+E_Mobile bigint,
+age int
+
+);
+alter table tblEmployee add E_mail varch
+
+
+---insert procedure---
+create procedure emp_insert
+@E_Name  varchar(50),
+@E_City varchar (50),
+@E_Mobile bigint,
+
+@age int,
+@E_mail varchar(50)
+as
+begin
+insert into tblEmployee (E_Name,E_City,E_Mobile,age,E_mail)values(@E_Name,@E_City,@E_Mobile,@age,@E_mail)
+end
+
+--display procedure--
+create procedure employee_get
+as
+begin
+select * from tblEmployee
+end
+
+--Delete procedure--
+create procedure employee_Delete
+@empId int
+as
+begin
+delete  from tblEmployee where empId=@empId
+end
+
+--Edit procedure--
+create procedure employee_Edit
+@empId int
+as
+begin
+select * from tblEmployee where empId=@empId
+end
+-- update procedure--
+create procedure employee_update
+@empId int,
+@E_Name varchar(50),
+@E_City varchar(50),
+@E_Mobile bigint,
+@age int
+as
+begin
+update tblEmployee set E_Name=@E_Name,E_City=@E_Name,E_Mobile=@E_Mobile where empId=@empId
+end
+
